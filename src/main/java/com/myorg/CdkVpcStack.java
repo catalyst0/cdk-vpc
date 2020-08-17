@@ -27,7 +27,7 @@ public class CdkVpcStack extends Stack {
         super(parent, id, props);
 
 
-        // Create 2 SubnetConfiguration objects
+
         SubnetConfiguration s1 = SubnetConfiguration.builder()
                 .cidrMask(24)
                 .name("Subnet0")
@@ -42,8 +42,26 @@ public class CdkVpcStack extends Stack {
                 //.reserved(true)
                 .build();
 
-        // Create a Vpc object that uses the SubnetConfiguration objects created above
-        // Note that this VPC will create 2 Nat Gateways in the 2 Public Subnets that will be generated from the 2 SubnetConfigurations above
+//        VpcSubnetGroup v = VpcSubnetGroup.builder()
+//                .subnets()
+//                .type()
+//                .build();
+
+
+//        SubnetConfiguration s2 = SubnetConfiguration.builder()
+//                .cidrMask(24)
+//                .name("SubnetB")
+//                .subnetType(SubnetType.PRIVATE)
+//                .reserved(true) // indicates that the address space is reserved only; subnet is not actually created
+//                .build();
+//
+//        SubnetConfiguration s3 = SubnetConfiguration.builder()
+//                .cidrMask(24)
+//                .name("SubnetC")
+//                .subnetType(SubnetType.PRIVATE)
+//                .reserved(true)
+//                .build();
+
         Vpc vpc = Vpc.Builder.create(this, "CdkVpc")
                 .cidr("10.0.0.0/16")
                 .defaultInstanceTenancy(DefaultInstanceTenancy.DEFAULT)
@@ -51,13 +69,26 @@ public class CdkVpcStack extends Stack {
                 .enableDnsHostnames(true)
                 .maxAzs(2)
                 .subnetConfiguration(asList(s1, s2))
+
                 .natGateways(2)
                 .natGatewayProvider(NatProvider.gateway())
                 .build();
 
-        // Now, I want to create 2 custom subnets - one private and another public
-        // For the private subnet, I want to create a route table with a route that uses one of the Nat Gateways created above as the target
-        // How do I do that programmatically?
+
+
+
+
+
+
+        List<ISubnet> v = vpc.getPublicSubnets();
+        //System.out.println(v.toString());
+        //System.out.println(v.size());
+        //String sid = v.get(1).getSubnetId();
+        //System.out.println(sid);
+        for (ISubnet s: v) {
+            System.out.println(s.getRouteTable().getRouteTableId());
+            s.getInternetConnectivityEstablished();
+        }
 
         PrivateSubnet subnetA = PrivateSubnet.Builder.create(this, "SNa")
                 .vpcId(vpc.getVpcId())
@@ -77,6 +108,42 @@ public class CdkVpcStack extends Stack {
 
 
 
+
+
+//        CfnNatGateway ngwA = new CfnNatGateway(this, "123", new CfnNatGatewayProps() {
+//            @Override
+//            public @NotNull String getAllocationId() {
+//                CfnEIP e = new CfnEIP(subnetB, "1234", new CfnEIPProps() {
+//                });
+//                return e.getAttrAllocationId();
+//            }
+//
+//            @Override
+//            public @NotNull String getSubnetId() {
+//                return subnetB.getSubnetId();
+//            }
+//        });
+
+
+
+
+//        Subnet subnetC = Subnet.Builder.create(this, "SNc")
+//                .vpcId(vpc.getVpcId())
+//                .cidrBlock("10.0.3.0/24")
+//                .mapPublicIpOnLaunch(false)
+//                .availabilityZone("us-east-1c")
+//                .build();
+//
+//        Subnet subnetD = Subnet.Builder.create(this, "SNd")
+//                .vpcId(vpc.getVpcId())
+//                .cidrBlock("10.0.4.0/24")
+//                .mapPublicIpOnLaunch(false)
+//                .availabilityZone("us-east-1d")
+//                .build();
+
+//        SubnetSelection s = SubnetSelection.builder()
+//                            .subnets(asList(subnetA, subnetB))
+//                           .build();
 
 
 
