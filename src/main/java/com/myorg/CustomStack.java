@@ -36,8 +36,7 @@ public class CustomStack extends Stack {
 
 
 
-    CfnSubnet snA = new CfnSubnet(vpcX,
-                                    "snA",
+    CfnSubnet snA = new CfnSubnet(vpcX, "snA",
                                      CfnSubnetProps.builder()
                                             .availabilityZone("us-east-1a")
                                             .cidrBlock("10.0.1.0/24")
@@ -46,8 +45,7 @@ public class CustomStack extends Stack {
                                             .build()
     );
 
-    CfnSubnet snB = new CfnSubnet(vpcX,
-                                    "snB",
+    CfnSubnet snB = new CfnSubnet(vpcX, "snB",
                                      CfnSubnetProps.builder()
                                              .availabilityZone("us-east-1c")
                                              .cidrBlock("10.0.2.0/24")
@@ -75,11 +73,24 @@ public class CustomStack extends Stack {
                                             .build()
                                       );
 
-    CfnSubnetRouteTableAssociation snARTA = new CfnSubnetRouteTableAssociation(snA, "snARTA", CfnSubnetRouteTableAssociationProps.builder()
+    CfnRouteTable snBRouteTable = new CfnRouteTable(snB, "snBRT", CfnRouteTableProps.builder()
+            .vpcId(vpcX.getRef())
+            .build()
+    );
+
+    CfnSubnetRouteTableAssociation snARTA = new CfnSubnetRouteTableAssociation(snA, "snARTA",
+                                                 CfnSubnetRouteTableAssociationProps.builder()
                                                 .routeTableId(snARouteTable.getRef())
                                                 .subnetId(snA.getRef())
                                                 .build()
                                               );
+
+    CfnSubnetRouteTableAssociation snARTB = new CfnSubnetRouteTableAssociation(snB, "snARTB",
+            CfnSubnetRouteTableAssociationProps.builder()
+                    .routeTableId(snBRouteTable.getRef())
+                    .subnetId(snB.getRef())
+                    .build()
+    );
 
     CfnEIP snAEIP = new CfnEIP(snA, "snAEIP",
                             CfnEIPProps.builder()
@@ -101,6 +112,12 @@ public class CustomStack extends Stack {
             .build()
     );
 
+    CfnRoute snBIGWWRoute = new CfnRoute(snB, "snBIGWRoute", CfnRouteProps.builder()
+            .destinationCidrBlock("0.0.0.0/0")
+            .gatewayId(igw.getRef())
+            .routeTableId(snBRouteTable.getRef())
+            .build()
+    );
 
 
 }
