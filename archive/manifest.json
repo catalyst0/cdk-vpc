@@ -1,0 +1,245 @@
+{
+  "version": "5.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CustomStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CustomStack.template.json"
+      },
+      "metadata": {
+        "/CustomStack/VPC.X": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCX",
+            "trace": [
+              "C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3621:16)",
+              "Kernel._create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:26)",
+              "Kernel.create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:2881:21)",
+              "KernelHost.processRequest (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13088:28)",
+              "KernelHost.run (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13026:14)",
+              "Immediate._onImmediate (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13029:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/CustomStack/VPC.X/snA": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCXsnA46BB7BBE",
+            "trace": [
+              "C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3621:16)",
+              "Kernel._create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:26)",
+              "Kernel.create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:2881:21)",
+              "KernelHost.processRequest (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13088:28)",
+              "KernelHost.run (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13026:14)",
+              "Immediate._onImmediate (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13029:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/CustomStack/VPC.X/snA/snART": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCXsnAsnART3DBA1374",
+            "trace": [
+              "C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3621:16)",
+              "Kernel._create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:26)",
+              "Kernel.create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:2881:21)",
+              "KernelHost.processRequest (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13088:28)",
+              "KernelHost.run (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13026:14)",
+              "Immediate._onImmediate (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13029:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/CustomStack/VPC.X/snA/snARTA": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCXsnAsnARTA11678893",
+            "trace": [
+              "C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3621:16)",
+              "Kernel._create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:26)",
+              "Kernel.create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:2881:21)",
+              "KernelHost.processRequest (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13088:28)",
+              "KernelHost.run (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13026:14)",
+              "Immediate._onImmediate (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13029:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/CustomStack/VPC.X/snA/snAEIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCXsnAsnAEIP1B4FCD9C",
+            "trace": [
+              "C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3621:16)",
+              "Kernel._create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:26)",
+              "Kernel.create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:2881:21)",
+              "KernelHost.processRequest (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13088:28)",
+              "KernelHost.run (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13026:14)",
+              "Immediate._onImmediate (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13029:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/CustomStack/VPC.X/snA/snANGWRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCXsnAsnANGWRoute2A91E5CB",
+            "trace": [
+              "C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3621:16)",
+              "Kernel._create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:26)",
+              "Kernel.create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:2881:21)",
+              "KernelHost.processRequest (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13088:28)",
+              "KernelHost.run (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13026:14)",
+              "Immediate._onImmediate (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13029:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/CustomStack/VPC.X/snB": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCXsnBEBDAD038",
+            "trace": [
+              "C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3621:16)",
+              "Kernel._create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:26)",
+              "Kernel.create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:2881:21)",
+              "KernelHost.processRequest (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13088:28)",
+              "KernelHost.run (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13026:14)",
+              "Immediate._onImmediate (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13029:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/CustomStack/VPC.X/snB/snBRT": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCXsnBsnBRTBC8040F1",
+            "trace": [
+              "C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3621:16)",
+              "Kernel._create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:26)",
+              "Kernel.create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:2881:21)",
+              "KernelHost.processRequest (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13088:28)",
+              "KernelHost.run (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13026:14)",
+              "Immediate._onImmediate (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13029:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/CustomStack/VPC.X/snB/snARTB": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCXsnBsnARTBC1BD021E",
+            "trace": [
+              "C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3621:16)",
+              "Kernel._create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:26)",
+              "Kernel.create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:2881:21)",
+              "KernelHost.processRequest (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13088:28)",
+              "KernelHost.run (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13026:14)",
+              "Immediate._onImmediate (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13029:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/CustomStack/VPC.X/snB/snBNGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCXsnBsnBNGW877CFBF9",
+            "trace": [
+              "C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3621:16)",
+              "Kernel._create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:26)",
+              "Kernel.create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:2881:21)",
+              "KernelHost.processRequest (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13088:28)",
+              "KernelHost.run (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13026:14)",
+              "Immediate._onImmediate (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13029:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/CustomStack/VPC.X/snB/snBIGWRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCXsnBsnBIGWRouteF8647D29",
+            "trace": [
+              "C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3621:16)",
+              "Kernel._create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:26)",
+              "Kernel.create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:2881:21)",
+              "KernelHost.processRequest (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13088:28)",
+              "KernelHost.run (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13026:14)",
+              "Immediate._onImmediate (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13029:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/CustomStack/VPC.X/IGW.A": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCXIGWA73810E9C",
+            "trace": [
+              "C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3621:16)",
+              "Kernel._create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:26)",
+              "Kernel.create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:2881:21)",
+              "KernelHost.processRequest (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13088:28)",
+              "KernelHost.run (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13026:14)",
+              "Immediate._onImmediate (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13029:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ],
+        "/CustomStack/VPC.X/gwaA": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCXgwaAE19E86B3",
+            "trace": [
+              "C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:49",
+              "Kernel._wrapSandboxCode (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3621:16)",
+              "Kernel._create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:3137:26)",
+              "Kernel.create (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:2881:21)",
+              "KernelHost.processRequest (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13088:28)",
+              "KernelHost.run (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13026:14)",
+              "Immediate._onImmediate (C:\\Users\\harte\\AppData\\Local\\Temp\\jsii-java-runtime5750226859381305600\\jsii-runtime.js:13029:37)",
+              "processImmediate (internal/timers.js:456:21)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/cloud-assembly-schema": "1.51.0",
+      "@aws-cdk/cx-api": "1.51.0",
+      "@aws-cdk/core": "1.51.0",
+      "@aws-cdk/region-info": "1.51.0",
+      "@aws-cdk/aws-iam": "1.51.0",
+      "@aws-cdk/aws-cloudwatch": "1.51.0",
+      "@aws-cdk/aws-kms": "1.51.0",
+      "@aws-cdk/aws-logs": "1.51.0",
+      "@aws-cdk/aws-events": "1.51.0",
+      "@aws-cdk/aws-s3": "1.51.0",
+      "@aws-cdk/aws-ssm": "1.51.0",
+      "@aws-cdk/aws-ec2": "1.51.0",
+      "jsii-runtime": "Java/11"
+    }
+  }
+}

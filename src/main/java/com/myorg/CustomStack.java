@@ -9,8 +9,10 @@ import java.util.Arrays;
 
 
 public class CustomStack extends Stack {
+    // Constructor
     public CustomStack(@Nullable Construct scope, @Nullable String id) {
         super(scope, id);
+        System.out.println("CONSTRUCTOR OF CUSTOMSTACK");
     }
 
     CfnTag vpcXNameTag = new CfnTag() {
@@ -24,6 +26,8 @@ public class CustomStack extends Stack {
             return "vpcX";
         }
     };
+
+
 
     CfnVPC vpcX = new CfnVPC(this, "VPC.X",
             CfnVPCProps.builder()
@@ -74,9 +78,9 @@ public class CustomStack extends Stack {
                                       );
 
     CfnRouteTable snBRouteTable = new CfnRouteTable(snB, "snBRT", CfnRouteTableProps.builder()
-            .vpcId(vpcX.getRef())
-            .build()
-    );
+                                            .vpcId(vpcX.getRef())
+                                            .build()
+                                      );
 
     CfnSubnetRouteTableAssociation snARTA = new CfnSubnetRouteTableAssociation(snA, "snARTA",
                                                  CfnSubnetRouteTableAssociationProps.builder()
@@ -118,6 +122,8 @@ public class CustomStack extends Stack {
             .routeTableId(snBRouteTable.getRef())
             .build()
     );
+
+
 
 
 }

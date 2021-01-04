@@ -1,0 +1,208 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "CustomStack": {
+        "id": "CustomStack",
+        "path": "CustomStack",
+        "children": {
+          "VPC.X": {
+            "id": "VPC.X",
+            "path": "CustomStack/VPC.X",
+            "children": {
+              "snA": {
+                "id": "snA",
+                "path": "CustomStack/VPC.X/snA",
+                "children": {
+                  "snART": {
+                    "id": "snART",
+                    "path": "CustomStack/VPC.X/snA/snART",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "VPCX"
+                        }
+                      }
+                    }
+                  },
+                  "snARTA": {
+                    "id": "snARTA",
+                    "path": "CustomStack/VPC.X/snA/snARTA",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "VPCXsnAsnART3DBA1374"
+                        },
+                        "subnetId": {
+                          "Ref": "VPCXsnA46BB7BBE"
+                        }
+                      }
+                    }
+                  },
+                  "snAEIP": {
+                    "id": "snAEIP",
+                    "path": "CustomStack/VPC.X/snA/snAEIP",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::EIP",
+                      "aws:cdk:cloudformation:props": {
+                        "domain": "vpc"
+                      }
+                    }
+                  },
+                  "snANGWRoute": {
+                    "id": "snANGWRoute",
+                    "path": "CustomStack/VPC.X/snA/snANGWRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "VPCXsnAsnART3DBA1374"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "natGatewayId": {
+                          "Ref": "VPCXsnBsnBNGW877CFBF9"
+                        }
+                      }
+                    }
+                  }
+                },
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                  "aws:cdk:cloudformation:props": {
+                    "cidrBlock": "10.0.1.0/24",
+                    "vpcId": {
+                      "Ref": "VPCX"
+                    },
+                    "availabilityZone": "us-east-1a",
+                    "mapPublicIpOnLaunch": false
+                  }
+                }
+              },
+              "snB": {
+                "id": "snB",
+                "path": "CustomStack/VPC.X/snB",
+                "children": {
+                  "snBRT": {
+                    "id": "snBRT",
+                    "path": "CustomStack/VPC.X/snB/snBRT",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::RouteTable",
+                      "aws:cdk:cloudformation:props": {
+                        "vpcId": {
+                          "Ref": "VPCX"
+                        }
+                      }
+                    }
+                  },
+                  "snARTB": {
+                    "id": "snARTB",
+                    "path": "CustomStack/VPC.X/snB/snARTB",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::SubnetRouteTableAssociation",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "VPCXsnBsnBRTBC8040F1"
+                        },
+                        "subnetId": {
+                          "Ref": "VPCXsnBEBDAD038"
+                        }
+                      }
+                    }
+                  },
+                  "snBNGW": {
+                    "id": "snBNGW",
+                    "path": "CustomStack/VPC.X/snB/snBNGW",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::NatGateway",
+                      "aws:cdk:cloudformation:props": {
+                        "allocationId": {
+                          "Fn::GetAtt": [
+                            "VPCXsnAsnAEIP1B4FCD9C",
+                            "AllocationId"
+                          ]
+                        },
+                        "subnetId": {
+                          "Ref": "VPCXsnBEBDAD038"
+                        }
+                      }
+                    }
+                  },
+                  "snBIGWRoute": {
+                    "id": "snBIGWRoute",
+                    "path": "CustomStack/VPC.X/snB/snBIGWRoute",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::EC2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "routeTableId": {
+                          "Ref": "VPCXsnBsnBRTBC8040F1"
+                        },
+                        "destinationCidrBlock": "0.0.0.0/0",
+                        "gatewayId": {
+                          "Ref": "VPCXIGWA73810E9C"
+                        }
+                      }
+                    }
+                  }
+                },
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
+                  "aws:cdk:cloudformation:props": {
+                    "cidrBlock": "10.0.2.0/24",
+                    "vpcId": {
+                      "Ref": "VPCX"
+                    },
+                    "availabilityZone": "us-east-1c",
+                    "mapPublicIpOnLaunch": true
+                  }
+                }
+              },
+              "IGW.A": {
+                "id": "IGW.A",
+                "path": "CustomStack/VPC.X/IGW.A",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::InternetGateway",
+                  "aws:cdk:cloudformation:props": {}
+                }
+              },
+              "gwaA": {
+                "id": "gwaA",
+                "path": "CustomStack/VPC.X/gwaA",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::EC2::VPCGatewayAttachment",
+                  "aws:cdk:cloudformation:props": {
+                    "vpcId": {
+                      "Ref": "VPCX"
+                    },
+                    "internetGatewayId": {
+                      "Ref": "VPCXIGWA73810E9C"
+                    }
+                  }
+                }
+              }
+            },
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
+              "aws:cdk:cloudformation:props": {
+                "cidrBlock": "10.0.0.0/16",
+                "tags": [
+                  {
+                    "key": "name",
+                    "value": "vpcX"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
